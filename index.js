@@ -40,6 +40,7 @@ elixir.extend('uglify', function(src, outputPath, baseDir, options) {
             .pipe(filter)
             .pipe(uglify(uglifyOptions))
             .pipe(gulp.dest(paths.output.path))
+            .pipe(rename({ suffix: '.min' }))
             .pipe(new elixir.Notification().message('Uglified!'));
     })
     // Register watcher for source path
