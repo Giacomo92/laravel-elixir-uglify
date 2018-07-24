@@ -1,12 +1,12 @@
 {
-  "name": "laravel-elixir-js-uglify",
+  "name": "oa-laravel-elixir-js-uglify",
   "version": "1.0.1",
   "description": "Minify html files with Laravel Elixir",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Gerardo Gómez <code@gerardo.im>",
+  "author": "Offline Agency <info@offlineagency.it>",
   "license": "MIT",
   "dependencies": {
     "gulp": "^3.8.8",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ruysu/laravel-elixir-uglify"
+    "url": "https://github.com/Giacomo92/laravel-elixir-uglify"
   },
   "keywords": [
     "laravel",
