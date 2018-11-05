@@ -1,6 +1,6 @@
 {
   "name": "oa-laravel-elixir-js-uglify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Minify html files with Laravel Elixir",
   "main": "index.js",
   "scripts": {
