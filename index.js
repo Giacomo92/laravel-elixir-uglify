@@ -1,9 +1,9 @@
-var gulp         = require('gulp');
-var gulpFilter   = require('gulp-filter');
-var rename       = require('gulp-rename');
-var uglify       = require('gulp-uglify');
-var elixir       = require('laravel-elixir');
-var config       = elixir.config;
+let gulp         = require('gulp');
+let gulpFilter   = require('gulp-filter');
+let rename       = require('gulp-rename');
+let uglify       = require('gulp-uglify-es').default;
+let elixir       = require('laravel-elixir');
+let config       = elixir.config;
 
 /**
  * Uglify javascript files, useful when using scripts loaded asynchronously
