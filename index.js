@@ -1,9 +1,9 @@
 let gulp         = require('gulp');
 let gulpFilter   = require('gulp-filter');
-let rename       = require('gulp-rename');
-let uglify       = require('gulp-uglify-es').default;
+let uglify       = require('gulp-uglify');
 let elixir       = require('laravel-elixir');
 let config       = elixir.config;
+var gutil = require('gulp-util');
 
 /**
  * Uglify javascript files, useful when using scripts loaded asynchronously
@@ -39,11 +39,11 @@ elixir.extend('uglify', function(src, outputPath, baseDir, options) {
         return gulp.src(paths.src.path)
             .pipe(filter)
             .pipe(uglify(uglifyOptions))
+            .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
             .pipe(gulp.dest(paths.output.path))
-            .pipe(rename({ suffix: '.min' }))
             .pipe(new elixir.Notification().message('Uglified!'));
     })
     // Register watcher for source path
-    .watch(paths.src.path);
+        .watch(paths.src.path);
 
 });
